@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-labelledby="title desc">
+  <title id="title">Kaatjes Home Bakery logo</title>
+  <desc id="desc">Vector logo with rolling pin, whisk, wheat branches and heart for Kaatjes Home Bakery.</desc>
+  <defs>
+    <style>
+      .line{fill:none;stroke:#1F5A73;stroke-width:16;stroke-linecap:round;stroke-linejoin:round}
+      .thin{fill:none;stroke:#1F5A73;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+      .fill{fill:#1F5A73}
+      .script{font-family:'Satisfy','Brush Script MT',cursive;font-size:132px;fill:#1F5A73}
+      .caps{font-family:'Montserrat','Arial',sans-serif;font-size:42px;letter-spacing:18px;fill:#1F5A73;font-weight:700}
+    </style>
+  </defs>
+
+  <!-- wheat left -->
+  <g transform="translate(175 114) rotate(-28)">
+    <path class="thin" d="M0 130 C20 90 28 45 22 0"/>
+    <path class="fill" d="M16 18c-27 4-37-16-35-38 24 5 38 17 35 38z"/>
+    <path class="fill" d="M28 50c-29 4-40-15-37-38 25 4 40 16 37 38z"/>
+    <path class="fill" d="M24 83c-29 4-40-15-37-38 25 4 40 16 37 38z"/>
+    <path class="fill" d="M6 112c-29 4-40-15-37-38 25 4 40 16 37 38z"/>
+    <path class="fill" d="M42 24c23-15 41 0 48 21-23 8-40 4-48-21z"/>
+    <path class="fill" d="M43 58c25-14 42 2 48 23-24 7-41 2-48-23z"/>
+    <path class="fill" d="M32 94c25-14 42 2 48 23-24 7-41 2-48-23z"/>
+  </g>
+
+  <!-- wheat right -->
+  <g transform="translate(545 114) scale(-1 1) rotate(-28)">
+    <path class="thin" d="M0 130 C20 90 28 45 22 0"/>
+    <path class="fill" d="M16 18c-27 4-37-16-35-38 24 5 38 17 35 38z"/>
+    <path class="fill" d="M28 50c-29 4-40-15-37-38 25 4 40 16 37 38z"/>
+    <path class="fill" d="M24 83c-29 4-40-15-37-38 25 4 40 16 37 38z"/>
+    <path class="fill" d="M6 112c-29 4-40-15-37-38 25 4 40 16 37 38z"/>
+    <path class="fill" d="M42 24c23-15 41 0 48 21-23 8-40 4-48-21z"/>
+    <path class="fill" d="M43 58c25-14 42 2 48 23-24 7-41 2-48-23z"/>
+    <path class="fill" d="M32 94c25-14 42 2 48 23-24 7-41 2-48-23z"/>
+  </g>
+
+  <!-- rolling pin -->
+  <g transform="translate(264 146) rotate(-42 90 70)">
+    <rect x="30" y="32" width="185" height="86" rx="22" class="line"/>
+    <path class="line" d="M8 75H30"/>
+    <path class="line" d="M215 75h34"/>
+    <path class="thin" d="M68 52h112"/>
+  </g>
+
+  <!-- whisk -->
+  <g transform="translate(408 74) rotate(28)">
+    <path class="line" d="M30 170 L82 90"/>
+    <path class="thin" d="M82 90 C36 34 64 -12 110 10 C153 31 139 86 82 90z"/>
+    <path class="thin" d="M88 84 C66 36 82 8 110 10"/>
+    <path class="thin" d="M96 84 C105 43 122 24 110 10"/>
+    <path class="thin" d="M76 96 L112 118"/>
+  </g>
+
+  <!-- little tools and heart -->
+  <path class="line" d="M324 240 l56 56 M380 240 l-56 56"/>
+  <path class="fill" d="M459 234c-27-35-86 1-70 49 12 37 70 73 70 73s58-36 70-73c16-48-43-84-70-49z"/>
+
+  <!-- underline + text -->
+  <text x="360" y="408" text-anchor="middle" class="script">Kaatjes</text>
+  <path class="thin" d="M155 427H336 M384 427H565"/>
+  <text x="360" y="491" text-anchor="middle" class="caps">HOME BAKERY</text>
+</svg>

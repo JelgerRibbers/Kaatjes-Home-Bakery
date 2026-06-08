@@ -1,10 +1,151 @@
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.site-nav');
-toggle?.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', String(isOpen));
-});
-document.querySelectorAll('.site-nav a').forEach(link => {
-  link.addEventListener('click', () => nav.classList.remove('open'));
-});
-document.querySelector('#year').textContent = new Date().getFullYear();
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kaatjes Home Bakery bakt ambachtelijk brood uit eigen keuken. Bestel zuurdesem, meergranenbrood, speltbrood en seizoensbrood via WhatsApp of mail." />
+  <title>Kaatjes Home Bakery | Ambachtelijk brood uit eigen keuken</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-kaatjes.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a href="#top" class="brand" aria-label="Kaatjes Home Bakery home">
+      <img src="assets/logo-kaatjes.svg" alt="Kaatjes Home Bakery" class="brand-logo" />
+    </a>
+    <button class="menu-toggle" aria-label="Menu openen" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Hoofdnavigatie">
+      <a href="#brood">Assortiment</a>
+      <a href="#over">Over Kaatje</a>
+      <a href="#blog">Blog</a>
+      <a href="#bestellen">Bestellen</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Kaatjes Home Bakery</p>
+        <h1>Dagvers brood, met rust en aandacht gebakken.</h1>
+        <p class="intro">Kaatjes Home Bakery bakt kleinschalig brood voor mensen die houden van pure ingrediënten, een knapperige korst en de geur van echt vers brood.</p>
+        <div class="actions">
+          <a class="button primary" href="#bestellen">Bestel brood</a>
+          <a class="button secondary" href="#brood">Bekijk assortiment</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero-bread.jpg" alt="Ambachtelijk rond brood op een houten plank" />
+      </div>
+    </section>
+
+    <section class="values" aria-label="Waarom Kaatjes Home Bakery">
+      <article><span class="icon">♧</span><h3>Natuurlijke ingrediënten</h3><p>Bloem, water, zout, tijd en aandacht. Geen onnodige toevoegingen.</p></article>
+      <article><span class="icon">◷</span><h3>Lange rijstijd</h3><p>Voor meer smaak, structuur en een beter verteerbaar brood.</p></article>
+      <article><span class="icon">♨</span><h3>Ambachtelijk gebakken</h3><p>Kleine batches, met de hand gevormd en vers gebakken.</p></article>
+      <article><span class="icon">♡</span><h3>Kleinschalig & persoonlijk</h3><p>Bestellen kan eenvoudig via WhatsApp of mail.</p></article>
+    </section>
+
+    <section id="brood" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Ons brood</p>
+        <h2>Een klein assortiment, bewust gebakken.</h2>
+        <p>Start met een overzichtelijke kaart. Pas namen, prijzen en beschikbaarheid makkelijk aan in de HTML.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="assets/card-sourdough.jpg" alt="Zuurdesem volkoren brood" />
+          <div><h3>Zuurdesem volkoren</h3><p>Vol van smaak, stevige korst en zachte kruim.</p><strong>vanaf €4,50</strong></div>
+        </article>
+        <article class="product-card">
+          <img src="assets/card-multigrain.jpg" alt="Meergranenbrood met zaden" />
+          <div><h3>Meergranen</h3><p>Boordevol granen en zaden, rijk aan smaak.</p><strong>vanaf €4,75</strong></div>
+        </article>
+        <article class="product-card">
+          <img src="assets/card-spelt.jpg" alt="Licht speltbrood" />
+          <div><h3>Speltbrood</h3><p>Licht verteerbaar, zacht en ambachtelijk gebakken.</p><strong>vanaf €4,25</strong></div>
+        </article>
+        <article class="product-card">
+          <img src="assets/card-nuts.jpg" alt="Brood met noten en zaden" />
+          <div><h3>Noten & zaden</h3><p>Met walnoten, zonnebloempitten en een vleugje honing.</p><strong>vanaf €5,25</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="over" class="story split-section">
+      <img src="assets/hands-bread.jpg" alt="Brood liefdevol vastgehouden in handen" />
+      <div>
+        <p class="eyebrow">Over Kaatje</p>
+        <h2>Brood bakken begint met geduld.</h2>
+        <p>Wat begon als liefde voor huisgemaakt brood groeide uit tot Kaatjes Home Bakery: een kleine thuisbakkerij waar smaak, rust en eerlijke ingrediënten centraal staan.</p>
+        <p>Elke week bakt Kaatje een beperkt aantal broden. Zo blijft elk brood persoonlijk, vers en met aandacht gemaakt.</p>
+        <p class="signature">Met liefde gebakken, voor jou.</p>
+      </div>
+    </section>
+
+    <section id="blog" class="section warm">
+      <div class="section-heading">
+        <p class="eyebrow">Blog</p>
+        <h2>Verhalen uit de bakkerij</h2>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <img src="assets/dough.jpg" alt="Deeg wordt gevormd met bloem" />
+          <div><p class="date">12 juni 2026</p><h3>Waarom brood tijd nodig heeft</h3><p>Een lange rijstijd geeft brood meer smaak, structuur en karakter.</p><a href="blog/waarom-brood-tijd-nodig-heeft.html">Lees meer</a></div>
+        </article>
+        <article class="blog-card">
+          <img src="assets/wheat.jpg" alt="Tarwe in warm licht" />
+          <div><p class="date">19 juni 2026</p><h3>Wat maakt zuurdesem bijzonder?</h3><p>Over desem, smaakontwikkeling en die herkenbare knapperige korst.</p><a href="blog/wat-maakt-zuurdesem-bijzonder.html">Lees meer</a></div>
+        </article>
+        <article class="blog-card">
+          <img src="assets/loaf-sliced.jpg" alt="Gesneden ambachtelijk brood" />
+          <div><p class="date">26 juni 2026</p><h3>Zo bewaar je vers brood</h3><p>Praktische tips om je brood langer lekker te houden.</p><a href="blog/zo-bewaar-je-vers-brood.html">Lees meer</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="bestellen" class="order-section">
+      <div>
+        <p class="eyebrow">Bestellen</p>
+        <h2>Bestel eenvoudig via WhatsApp of mail.</h2>
+        <p>Bestellen kan tot donderdag 20:00 uur. Afhalen op vrijdag of zaterdag in overleg.</p>
+        <ul class="order-list">
+          <li>Kies je brood</li>
+          <li>Stuur je naam en gewenste afhaalmoment</li>
+          <li>Je krijgt een bevestiging terug</li>
+        </ul>
+      </div>
+      <div class="order-card">
+        <h3>Voorbeeldbericht</h3>
+        <p>Hoi Kaatje, ik wil graag 1 zuurdesem volkoren en 1 meergranenbrood bestellen. Afhalen graag vrijdagmiddag. Groetjes!</p>
+        <a class="button primary full" href="https://wa.me/31600000000?text=Hoi%20Kaatje%2C%20ik%20wil%20graag%20brood%20bestellen." target="_blank" rel="noopener">Bestel via WhatsApp</a>
+        <a class="button secondary full" href="mailto:info@kaatjeshomebakery.nl?subject=Broodbestelling%20Kaatjes%20Home%20Bakery&body=Hoi%20Kaatje%2C%0A%0AIk%20wil%20graag%20brood%20bestellen%3A%0A-%20%0A%0ANaam%3A%0AAfhaalmoment%3A%0A%0AGroetjes%2C">Bestel via mail</a>
+        <small>Vervang het telefoonnummer en mailadres in <code>index.html</code>.</small>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>Kaatjes Home Bakery</h2>
+        <p>Ambachtelijk brood uit eigen keuken.</p>
+      </div>
+      <div class="contact-grid">
+        <div><strong>Afhalen</strong><span>Berlicum / omgeving Den Bosch</span></div>
+        <div><strong>Mail</strong><span>info@kaatjeshomebakery.nl</span></div>
+        <div><strong>Instagram</strong><span>@kaatjeshomebakery</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Kaatjes Home Bakery — Ambachtelijk brood uit eigen keuken.</p>
+    <a href="#top">Terug naar boven ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
